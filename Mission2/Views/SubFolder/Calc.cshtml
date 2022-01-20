@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Mission 3 Calculator";
+}
+
+@model CalcModel;   
+
+<!--Grade Calculator-->
+<h2>Grade Calculator</h2>
+<!--<p><u>Input # of points</u></p>-->
+<form method="post">
+    <label>Assignments</label> <!--55%-->
+    <input id="assignments" asp-for="Assign" /><br />
+
+    <label>Group Project</label>
+    <input id="groupproject" asp-for="Group" /><br /> <!--5%-->
+
+    <label>Quizzes</label>
+    <input id="quizzes" asp-for="Quiz" /><br /> <!--10%-->
+
+    <label>Exams</label>
+    <input id="exams" asp-for="Ex" /><br /> <!--20%-->
+
+    <label>INTEX</label>
+    <input id="intex" asp-for="Intex" /><br /> <!--10%-->
+
+    <br />
+
+    <!-- <input id="button" type="button" value="Calculate the Score" /> <!--Javascript vid shows how to link this stuff to the .js page-->
+    <!--button to calculate score-->
+    <input id="calc" type="submit" onclick="myFunction()" value="Calculate the Score" />
+
+    <div asp-validation-summary="All"></div>
+</form>
+
+<!--Bootstrap, jquery, and link to gradecalculator.js-->
+
+<script src="~/js/GradeCalculator.js"></script>
